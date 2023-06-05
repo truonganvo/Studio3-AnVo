@@ -669,7 +669,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!212 &1841471920
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 10
-  JumpForce: 5
+  JumpForce: 15
   animator: {fileID: 0}
   jumpingSound: {fileID: 0}
   playerSprite: {fileID: 1841471920}
