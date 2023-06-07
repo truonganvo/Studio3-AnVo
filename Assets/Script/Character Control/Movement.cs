@@ -53,19 +53,17 @@ public class Movement : MonoBehaviour
         //jumping & animation
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_rigidbody.velocity.y) < 0.001f)
         {
+            animator.SetBool("IsJumping", true);
             _rigidbody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             jumpingSound.Play();
         }
-        if (_rigidbody.velocity.y > .1f)
-        {
-            state = MovementState.jumping;
-        }
-        else if (_rigidbody.velocity.y < -.1f)
-        {
-            state = MovementState.falling;
-        }
-
-        animator.SetInteger("state", (int)state);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            animator.SetBool("IsJumping", false);
+        }
+    }
 }
