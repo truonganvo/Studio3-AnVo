@@ -51,7 +51,7 @@ public class Slide : MonoBehaviour
         StartCoroutine("StopSlide");
     }
 
-    IEnumerator StopSlide()
+    private IEnumerator StopSlide()
     {
         yield return new WaitForSeconds(0.0f);
         anim.Play("NewState");

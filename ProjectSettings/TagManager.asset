@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - orange portal
+  - blue portal
   layers:
   - Default
   - TransparentFX
