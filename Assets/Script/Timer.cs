@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
 
         if (timeValue <= 0)
         {
-            SceneManager.LoadScene("LostScene");
+            SceneManager.LoadScene("Lose Scene");
         }
     }
 
@@ -53,6 +53,4 @@ public class Timer : MonoBehaviour
     {
         timeValue -= 5;
     }
-
-
 }
